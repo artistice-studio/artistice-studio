@@ -64,11 +64,11 @@ export default function purpose() {
           </div>
 
           <div className="mt-base">
-            <FadeRight>
+            <FadeLeft>
               <Link className={`${buttonVariants({ variant: "outline" })} hover:bg-primary hover:text-black group`} href="/about">
                 About Myself <ArrowRight className="ml-2 group-hover:ml-4 transition-all size-4 inline" />
               </Link>
-            </FadeRight>
+            </FadeLeft>
           </div>
         </div>
       </div>
