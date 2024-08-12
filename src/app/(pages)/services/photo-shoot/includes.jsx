@@ -5,7 +5,7 @@ import { services } from "@/lib/datas/index";
 import Image from "next/image";
 import { useState } from "react";
 
-const listNo=0
+const listNo = 0
 export default function Includes() {
     const [displayList, setDisplayList] = useState(services[listNo].lists[0].images);
 
@@ -33,14 +33,19 @@ export default function Includes() {
 
                 <div className="mt-block grid gap-base sm:grid-cols-2 md:grid-cols-3">
                     {displayList.map((item, i) => (
-                        <Image
-                            className="aspect-square object-cover rounded-md"
-                            src={item}
-                            width={400}
-                            height={400}
-                            alt={item}
-                            key={item + "VideoEditing"}
-                        />
+                        <FadeUp
+                            key={item + "Video Editing"}
+                        >
+                            <div className="hover:outline-primary hover:outline-1 hover:outline rounded-md overflow-hidden">
+                                <Image
+                                    className="aspect-square object-cover "
+                                    src={item}
+                                    width={400}
+                                    height={400}
+                                    alt={item}
+                                />
+                            </div>
+                        </FadeUp>
                     ))}
                 </div>
             </div>

@@ -14,11 +14,16 @@ export default function purpose() {
       <div className="relative section-wrapper grid md:grid-cols-2 gap-block">
         {/* Image */}
         <FadeUp>
-          <div className="md:sticky top-block w-full h-fit grid grid-cols-2 gap-base">
-            <PurposeImageCard imageUrl="/images/projects/regalestate.png"/>
-            <PurposeImageCard imageUrl="/images/projects/bugbuster.png"/>
-            <PurposeImageCard imageUrl="/images/projects/cofeco.jpg"/>
-            <PurposeImageCard imageUrl="/images/projects/foodie.jpg"/>
+          <div className="md:sticky top-block w-full h-fit grid grid-cols-3 gap-base">
+            <PurposeImageCard imageUrl="/images/services/photo-shoot/product/1.png"/>
+            <PurposeImageCard imageUrl="/images/services/photo-shoot/product/7.png"/>
+            <PurposeImageCard imageUrl="/images/services/photo-shoot/product/11.png"/>
+            <PurposeImageCard imageUrl="/images/services/photo-shoot/product/16.png"/>
+            <PurposeImageCard imageUrl="/images/services/photo-shoot/product/24.png"/>
+            <PurposeImageCard imageUrl="/images/services/photo-shoot/product/30.jpg"/>
+            <PurposeImageCard imageUrl="/images/services/photo-shoot/product/3.png"/>
+            <PurposeImageCard imageUrl="/images/services/photo-shoot/product/15.png"/>
+            <PurposeImageCard imageUrl="/images/services/photo-shoot/product/22.png"/>
           </div>
         </FadeUp>
 
