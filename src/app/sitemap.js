@@ -11,28 +11,22 @@ export default function sitemap() {
             url: `${baseUrl}/about`,
         },
         {
-            url: `${baseUrl}/services`,
-        },
-        {
-            url: `${baseUrl}/portfolio`,
-        },
-        {
             url: `${baseUrl}/contact`,
         },
         {
-            url: `${baseUrl}/hire`,
+            url: `${baseUrl}/services`,
         },
         {
             url: `${baseUrl}/privacy-policy`,
         },
         {
-            url: `${baseUrl}/services/website-design-development`,
+            url: `${baseUrl}/services/photo-shoot`,
         },
         {
-            url: `${baseUrl}/services/website-updates`,
+            url: `${baseUrl}/services/video-editing`,
         },
         {
-            url: `${baseUrl}/services/speed-optimization`,
+            url: `${baseUrl}/services/graphic-design`,
         },
     ]
 }

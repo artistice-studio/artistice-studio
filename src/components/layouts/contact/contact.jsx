@@ -6,6 +6,7 @@ import FadeRight from "@/components/animaitons/FadeRight";
 import FadeUp from "@/components/animaitons/FadeUp";
 import Link from "next/link";
 import { buttonVariants } from "@/components/ui/button";
+import { MessageCircle } from "lucide-react";
 
 export default function Contact({ className, heading, subTitle }) {
     return (
@@ -19,7 +20,7 @@ export default function Contact({ className, heading, subTitle }) {
                         <p>{subTitle || 'Reach out to us for any inquiries or assistance'}</p>
                     </FadeUp>
                     <FadeUp>
-                        <Link className={buttonVariants()} href="https://wa.me/916206398128">Message Now</Link>
+                        <Link className={buttonVariants()} href="https://wa.me/91   6206398128"><MessageCircle className="size-5" /> Message Now</Link>
                     </FadeUp>
                 </div>
             </div>

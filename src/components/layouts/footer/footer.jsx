@@ -47,7 +47,7 @@ export default function Footer() {
 
         <div className="pt-base">
           <p className="text-muted-foreground text-sm text-center">
-            Copyright &copy; {currentYear} {siteConfig.name} / <Link className="hover:underline" href="/privacy-policy"> privacy-policy</Link> / <Link className="hover:underline" href="/credits"> Credits</Link> / Developed by <Link className="hover:underline" href="https://webdevsalmann.vercel.app/"> webdevsalmann</Link> 💖
+            Copyright &copy; {currentYear} {siteConfig.name} / <Link className="hover:underline" href="/privacy-policy"> privacy-policy</Link> / Developed by <Link className="hover:underline" href="https://mallickwebstudio.com/"> mallickwebstudio</Link> 💖
           </p>
         </div>
       </div>
