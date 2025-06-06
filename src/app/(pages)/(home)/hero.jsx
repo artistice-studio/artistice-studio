@@ -58,9 +58,9 @@ export default function Hero() {
                         <div className="hero-blob" />
                         <div className="relative w-full bg-contain flex-center rounded overflow-hidden" >
                             <Image
-                                className="relative object-contain object-center rounded"
-                                width={800}
-                                height={800}
+                                className="relative object-contain w-full object-center rounded"
+                                width={400}
+                                height={400}
                                 src="/hero.svg"
                                 alt="hero image by manypixel"
                                 priority
