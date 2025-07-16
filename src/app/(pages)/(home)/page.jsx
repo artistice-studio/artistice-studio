@@ -5,6 +5,7 @@ import Service from "./service";
 import FAQ from "./faq";
 import Pricing from "./pricing";
 import WorkingProcess from "./working-process";
+import WorkPreview from "./work-preview";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <Hero />
       <Purpose />
       <Service />
+      <WorkPreview />
       <Pricing />
       <WorkingProcess />
       <FAQ />

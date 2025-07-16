@@ -15,7 +15,7 @@ export default function ServiceCard({ data: { icon, title, description, lists, l
                     </li>
                 ))}
             </ul>
-            <Link className={`${buttonVariants({ variant: "outline" })} mt-base hover:bg-primary hover:text-black group`} href={link}>View More  <ArrowRight className="ml-2 group-hover:ml-4 transition-all size-4 inline" /></Link>
+            {/* <Link className={`${buttonVariants({ variant: "outline" })} mt-base hover:bg-primary hover:text-black group`} href={link}>View More  <ArrowRight className="ml-2 group-hover:ml-4 transition-all size-4 inline" /></Link> */}
         </div >
     )
 }
