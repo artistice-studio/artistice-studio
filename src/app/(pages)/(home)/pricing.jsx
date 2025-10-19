@@ -6,27 +6,29 @@ import { CheckCheck } from "lucide-react";
 
 export default function Pricing() {
   return (
-    <section className="bg-section-pattern-2">
-      <div className="section-wrapper">
+    <section className="relative p-4 bg-background">
+      <div className="mx-auto container p-4 md:px-12 lg:px-16 bg-secondary rounded-2xl">
         <div className="mx-auto">
           <FadeUp>
-            <h2>Quality & Affordable <SparkleText text="Pricing" /></h2>
+            <h2 className="h2 mt-6">Quality & Affordable <SparkleText text="Pricing" /></h2>
           </FadeUp>
 
-          <div className="mt-block p-base w-full bg-background rounded overflow-hidden border">
+          <div className="mt-12 p-4 w-full bg-background rounded-md overflow-hidden border">
             <h3>I will do</h3>
-            <ul className="mt-base grid gap-base sm:grid-cols-2 md:grid-cols-3">
-              {benefits.map(item => (
+            <ul className="mt-4 grid gap-4 sm:grid-cols-2 md:grid-cols-3">
+              {benefits.map((item) => (
                 <li className="flex gap-4 group" key={item + "Benefits"}>
-                  <CheckCheck className="mt-[2px] size-5 shrink-0 group-hover:text-primary" />
+                  <div className="mt-0.5 p-0.5 bg-secondary rounded-full border">
+                    <CheckCheck className="size-4 shrink-0 group-hover:text-primary" />
+                  </div>
                   <div>{item}</div>
                 </li>
               ))}
             </ul>
           </div>
 
-          <h3 className="mt-lg mb-sm">At Price</h3>
-          <div className="grid gap-base md:grid-cols-3">
+          <h3 className="mt-6 mb-sm">At Price</h3>
+          <div className="grid gap-4 md:grid-cols-3">
             {pricing.map((item, i) => (
               <FadeUp
                 transition={{

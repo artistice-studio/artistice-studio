@@ -1,5 +1,5 @@
 import Service from "../(home)/service";
-import Hero from "@/components/ui/Hero";
+import Hero from "@/components/other/hero";
 import SparkleText from "@/components/helper/SparkleText";
 import { serviceMd } from "@/lib/datas/metaDatas";
 

@@ -2,7 +2,7 @@
 import FadeUp from "@/components/animaitons/FadeUp";
 import TechCard from "@/components/cards/TechCard";
 import SparkleText from "@/components/helper/SparkleText";
-import { ICoralDraw, IExpress, IKineMaster, ILightroom, INext, IPhotoshop, IShadcn } from "@/components/ui/svgs";
+import { ICoralDraw, IExpress, IKineMaster, ILightroom, INext, IPhotoshop, IShadcn } from "@/components/other/svgs";
 import { motion } from "framer-motion";
 
 const techStackData = [
@@ -26,16 +26,20 @@ const techStackData = [
 
 export default function TechStack() {
   return (
-    <section className="bg-section-pattern-2">
-      <div className="section-wrapper">
+    <section className="relative p-4 bg-background">
+      <div className="relative mx-auto container bg-secondary p-4 py-20 md:px-12 lg:px-16 rounded-2xl overflow-hidden">
+        {/* <div className="absolute inset-0 bg-section-pattern"></div> */}
         <FadeUp>
-          <h2 className="mb-2">Go To <SparkleText text="Tech Stack" /></h2>
+          <h2 className="h2">
+            <SparkleText text="Tools" /><span className="!text-foreground"> I use</span>
+          </h2>
         </FadeUp>
 
-        <div className="mt-block mx-auto w-fit">
+        <div className="mt-8 mx-auto w-fit">
           <div className="p-2 flex gap-4 flex-center flex-wrap w-fit">
             {techStackData.map((item, i) => (
               <FadeUp
+                className="shrink-0"
                 transition={{
                   type: "spring",
                   delay: i * 0.3

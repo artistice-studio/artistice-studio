@@ -5,12 +5,14 @@ import ServiceCard from "@/components/cards/service-card";
 
 export default function Service() {
     return (
-        <section id="service">
-            <div className="section-wrapper">
+        <section className="relative p-4 bg-background" id="service">
+            <div className="mx-auto container p-4 md:px-12 lg:px-16 bg-secondary rounded-2xl">
                 <FadeUp>
-                    <h2><span className=""><SparkleText text="Services" /></span> I Offer</h2>
+                    <h2 className="mt-6 h2">
+                        <SparkleText text="Services" /> I Offer
+                    </h2>
                 </FadeUp>
-                <div className="mt-block grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
                     {services.map((item, i) => {
                         return (
                             <FadeUp
@@ -19,7 +21,7 @@ export default function Service() {
                                     delay: 0.3 * i
                                 }}
                                 key={i + "HomeServiceCard"} >
-                                <ServiceCard data={item} />
+                                <ServiceCard data={item} i={i} />
                             </FadeUp>
                         )
                     })}

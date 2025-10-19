@@ -3,7 +3,7 @@ import { Aperture, Film, PencilRuler } from "lucide-react";
 // SERVICES
 export const services = [
     {
-        icon: <Aperture className="size-8 group-hover:text-primary" />,
+        icon: <Aperture className="size-10 group-hover:text-primary" />,
         title: "Photo Shoot",
         description: "Jumpstart and establish your brand with your first website or get your existing website redesigned/updated.",
         lists: [
@@ -65,7 +65,7 @@ export const services = [
         link: "/services/photo-shoot"
     },
     {
-        icon: <Film className="size-8 group-hover:text-primary" />,
+        icon: <Film className="size-10 group-hover:text-primary" />,
         title: "Video Editing",
         description: "Anything from Website Updates, Bug Fixes, Content changes, or additions of any kind.",
         lists: [
@@ -100,7 +100,7 @@ export const services = [
         link: "/services/video-editing"
     },
     {
-        icon: <PencilRuler className="size-8 group-hover:text-primary" />,
+        icon: <PencilRuler className="size-10 group-hover:text-primary" />,
         title: "Graphic Design",
         description: "Get your website loading faster. A slow site can easily loose visitors and customers.",
         lists: [

@@ -1,12 +1,9 @@
 "use client"
-import { buttonVariants } from "@/components/ui/button";
-import SparkleText from "@/components/helper/SparkleText";
 import Image from "next/image";
 import Link from "next/link";
-import ScrollMouse from "@/components/ui/ScrollMouse";
+import { buttonVariants } from "@/components/ui/button";
+import SparkleText from "@/components/helper/SparkleText";
 import { motion } from "framer-motion";
-import FadeLeft from "@/components/animaitons/FadeLeft";
-import FadeUp from "@/components/animaitons/FadeUp";
 
 const container = {
     hidden: { opacity: 0 },
@@ -22,22 +19,25 @@ const item = {
 };
 
 
-export default function Hero() {
+export default function HeroOne() {
     return (
-        <section>
-            <div className="section-wrapper">
-
-                <div className="grid gap-8 md:grid-cols-5">
-                    <motion.div className="md:col-span-3 flex-center"
+        <section
+            className="relative p-4 bg-background"
+            role="region"
+            aria-label="Hero section for product introduction"
+        >
+            <div className="mx-auto container p-4 md:px-12 lg:px-16 bg-gradient-to-bl from-red-500 to-orange-200 rounded-2xl grid grid-cols-1 md:grid-cols-2 items-center text-center md:text-left gap-8 md:gap-10">
+                {/* Text Content */}
+                <motion.div
                         variants={container}
                         initial="hidden"
                         animate="visible"
                     >
                         <div>
-                            <motion.div variants={item} className="text-2xl capitalize self-start">
+                            <motion.div variants={item} className="text-2xl capitalize self-start font-medium">
                                 I&apos;m Sanjeet Kumar Patro
                             </motion.div>
-                            <motion.h1 variants={item} className="my-base leading-[55px] self-start">
+                            <motion.h1 variants={item} className="h1 my-4 leading-[55px] self-start">
                                 <span className="clr-p"><SparkleText text="Photographer" /></span> <br />
                                 <span className="clr-p"><SparkleText text="Video Editor" /></span> <br />
                                 <span className="clr-p"><SparkleText text="Graphic-" /></span>
@@ -48,28 +48,24 @@ export default function Hero() {
                                 We help you <span className="font-bold"> shine online. </span>  Whether you need  <span className="font-bold"> eye-catching photos, professional graphic design, or engaging video content, </span>  we&apos;ve got you covered.
                             </motion.p>
 
-                            <motion.div variants={item} className="mt-base self-start">
-                                <Link className={`${buttonVariants()}`} href="/contact" >Hire Now</Link>
+                            <motion.div variants={item} className="mt-4 self-start">
+                                <Link className={`${buttonVariants()} !rounded-full`} href="/contact" >Hire Now</Link>
                             </motion.div>
                         </div>
                     </motion.div>
 
-                    <FadeUp className="relative md:col-span-2">
-                        <div className="hero-blob" />
-                        <div className="relative w-full bg-contain flex-center rounded overflow-hidden" >
-                            <Image
-                                className="relative object-contain w-full object-center rounded"
-                                width={400}
-                                height={400}
-                                src="/hero.svg"
-                                alt="hero image by manypixel"
-                                priority
-                            />
-                        </div>
-                    </FadeUp>
+                {/* Hero Image */}
+                <div className="flex justify-center">
+                    <Image
+                        className="w-full aspect-square object-contain rounded-md select-none pointer-events-none"
+                        src="/hero.svg"
+                        width={400}
+                        height={400}
+                        alt="Illustration representing the product's main features"
+                        priority
+                    />
                 </div>
-                <ScrollMouse />
             </div>
-        </section >
-    )
+        </section>
+    );
 }

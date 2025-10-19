@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { buttonVariants } from "@/components/ui/button";
 import { usePathname } from 'next/navigation';
+
 export const navigationLinks = [
     {
         title: "Home",

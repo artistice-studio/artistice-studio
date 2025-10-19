@@ -1,12 +1,14 @@
-import { ArrowRight, CheckCheck } from "lucide-react";
+import { CheckCheck } from "lucide-react";
 import Link from "next/link";
-import { buttonVariants } from "../ui/button";
 
-export default function ServiceCard({ data: { icon, title, description, lists, link } }) {
+export default function ServiceCard({ data: { icon, title, description, lists, link }, i }) {
     return (
-        <div className="relative p-4 h-full w-full hover:bg-gradient-to-bl from-background to-secondary/55 border border-transparent hover:border-muted rounded-lg overflow-hidden transition-all group">
-            <div className="text-muted-foreground">{icon}</div>
-            <div className="my-base text-lg font-semibold">{title}</div>
+        <Link className="relative p-4 block hover:px-8 h-full w-full bg-background rounded-lg transition-all group cursor-pointer" href={link}>
+            <div className="flex justify-end">
+                <div className="text-muted-foreground">{icon}</div>
+            </div>
+
+            <div className="my-4 text-2xl md:text-3xl font-semibold">{title}</div>
 
             <ul className="text-muted-foreground">
                 {lists.map((item, i) => (
@@ -15,7 +17,7 @@ export default function ServiceCard({ data: { icon, title, description, lists, l
                     </li>
                 ))}
             </ul>
-            {/* <Link className={`${buttonVariants({ variant: "outline" })} mt-base hover:bg-primary hover:text-black group`} href={link}>View More  <ArrowRight className="ml-2 group-hover:ml-4 transition-all size-4 inline" /></Link> */}
-        </div >
+            {/* <Link className={`${buttonVariants({ variant: "outline" })} mt-4 hover:bg-primary hover:text-black group`} href={link}>View More  <ArrowRight className="ml-2 group-hover:ml-4 transition-all size-4 inline" /></Link> */}
+        </Link>
     )
 }

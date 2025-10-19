@@ -15,9 +15,13 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={archivo.className} suppressHydrationWarning="true" suppressContentEditableWarning="true">
         <Providers>
-          <Navbar />
-          {children}
-          <Footer />
+          <div className="min-h-screen flex flex-col">
+            <Navbar />
+            <div className="flex-1">
+              {children}
+            </div>
+            <Footer />
+          </div>
         </Providers>
       </body>
     </html >

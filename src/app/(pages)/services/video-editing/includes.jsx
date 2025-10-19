@@ -16,7 +16,7 @@ export default function Includes() {
     return (
         <section>
             <div className="section-wrapper">
-                <div className="mx-auto w-full md:w-4/5  flex flex-col sm:flex-row sm:justify-between sm:items-center gap-base">
+                <div className="mx-auto w-full md:w-4/5  flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4">
                     {services[listNo].lists.map((item, i) => (
                         <FadeUp
                             transition={{
@@ -31,7 +31,7 @@ export default function Includes() {
                     ))}
                 </div>
 
-                <div className="mt-block grid gap-base sm:grid-cols-2 md:grid-cols-3">
+                <div className="mt-12 grid gap-4 sm:grid-cols-2 md:grid-cols-3">
                     {displayList.map((item, i) => (
                         <Image
                             className="aspect-square object-cover rounded-md"

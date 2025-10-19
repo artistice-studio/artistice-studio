@@ -1,6 +1,6 @@
 import SparkleText from "@/components/helper/SparkleText";
 import Contact from "@/components/layouts/contact/contact";
-import Hero from "@/components/ui/Hero";
+import Hero from "@/components/other/hero";
 import { contactMd } from "@/lib/datas/metaDatas";
 
 export const metadata = contactMd;

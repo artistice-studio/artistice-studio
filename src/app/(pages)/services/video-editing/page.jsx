@@ -1,5 +1,5 @@
 import SparkleText from "@/components/helper/SparkleText";
-import Hero from "@/components/ui/Hero";
+import Hero from "@/components/other/hero";
 import Includes from "./includes";
 import Contact from "@/components/layouts/contact/contact";
 

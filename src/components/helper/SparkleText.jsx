@@ -16,7 +16,7 @@ const SparkleText = ({ text }) => {
 
     useEffect(() => {
         let index = 0;
-        const interval = 1000;
+        const interval = 2000;
 
         const animateInterval = (star) => setInterval(() => animate(star), interval);
 

@@ -1,4 +1,4 @@
-import GoBackButton from '@/components/ui/GoBackButton'
+import GoBackButton from '@/components/other/go-back-button'
 import { buttonVariants } from '@/components/ui/button'
 import Link from 'next/link'
 
@@ -9,9 +9,9 @@ export default function NotFound() {
                 <div className="section-wrapper">
                     <div className='mx-auto w-full md:w-1/2 text-center grid place-items-center'>
                         <h1 className='text-destructive'>404</h1>
-                        <h2 className='mt-base'>Page Doesn&apos;t Exist</h2>
+                        <h2 className='mt-4'>Page Doesn&apos;t Exist</h2>
 
-                        <div className='mt-base flex gap-2'>
+                        <div className='mt-4 flex gap-2'>
                             <GoBackButton />
                             <Link className={`${buttonVariants({ variant: "outline" })} `} href="/">Return Home</Link>
                         </div>

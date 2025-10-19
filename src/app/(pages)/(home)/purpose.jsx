@@ -36,7 +36,7 @@ const galleryData = [
   { imageSrc: "/images/works/24.webp", imageAlt: "Image 6" },
   { imageSrc: "/images/works/25.webp", imageAlt: "Image 7" },
   { imageSrc: "/images/works/30.webp", imageAlt: "Image 8" },
-  { imageSrc: "/images/works/36.webp", imageAlt: "Image 9" },
+  { imageSrc: "/images/works/28.webp", imageAlt: "Image 9" },
 ]
 
 export default function Purpose() {
@@ -49,11 +49,11 @@ export default function Purpose() {
   }
 
   return (
-    <section className="bg-section-secondary">
-      <div className="relative section-wrapper grid md:grid-cols-2 gap-block">
+    <section className="relative p-4 bg-background">
+      <div className="mx-auto container p-4 md:px-12 lg:px-16 bg-secondary rounded-2xl grid md:grid-cols-2 gap-12 items-center">
         {/* Image Grid */}
         <FadeUp>
-          <div className="md:sticky top-block w-full h-fit grid grid-cols-3 gap-base">
+          <div className="top-12 w-full h-fit grid grid-cols-3 gap-4">
             {galleryData.map((item, index) => (
               <div
                 key={item.imageSrc}
@@ -75,7 +75,7 @@ export default function Purpose() {
         {/* Text Content */}
         <div>
           <FadeUp>
-            <h2 className="text-2xl md:text-3xl md:text-left">
+            <h2 className="h2 text-2xl md:text-3xl md:text-left">
               Transform Your Brand with <SparkleText text="Stunning Visuals" /> Stand Out and Engage Your Audience.
             </h2>
           </FadeUp>
@@ -98,30 +98,30 @@ export default function Purpose() {
             </FadeUp>
           </div>
 
-          <div className="mt-base">
+          <div className="mt-4">
             <FadeLeft>
               <div className="flex gap-4 items-center leading-10">
-                <Sparkles className="inline size-base text-primary shrink-0" />
+                <Sparkles className="inline size-4 text-primary shrink-0" />
                 <div>High Quality Assets</div>
               </div>
             </FadeLeft>
 
             <FadeLeft>
               <div className="flex gap-4 items-center leading-10">
-                <Layers className="inline size-base text-primary shrink-0" />
+                <Layers className="inline size-4 text-primary shrink-0" />
                 <div>More Engagement</div>
               </div>
             </FadeLeft>
 
             <FadeLeft>
               <div className="flex gap-4 items-center leading-10">
-                <BarChart4 className="inline size-base text-primary shrink-0" />
+                <BarChart4 className="inline size-4 text-primary shrink-0" />
                 <div>More Conversion</div>
               </div>
             </FadeLeft>
           </div>
 
-          <div className="mt-base">
+          <div className="mt-4">
             <FadeLeft>
               <Link
                 className={clsx(buttonVariants({ variant: "outline" }), "group hover:bg-primary hover:text-black")}
@@ -136,24 +136,24 @@ export default function Purpose() {
 
       {/* Modal with Carousel */}
       <Dialog open={isOpen} onOpenChange={setIsOpen}>
-        <DialogContent className="max-w-sm max-h-[70dvh] bg-background">
+        <DialogContent className="max-w-sm max-h-[70vh] w-auto aspect-square bg-background overflow-hidden">
           <Carousel
-            className="bg-secondary w-full aspect-square"
+            className="bg-secondary grid grid-cols-1 rounded-md aspect-square border"
             opts={{
               align: "center",
               loop: true,
               startIndex: selectedIndex,
             }}
           >
-            <CarouselContent>
+            <CarouselContent className="">
               {galleryData.map((item, index) => (
-                <CarouselItem key={index} className="flex justify-center">
+                <CarouselItem key={index} className="w-full flex justify-center">
                   <Image
                     className="aspect-square object-contain rounded-md select-none pointer-events-none"
                     src={item.imageSrc}
                     alt={item.imageAlt}
-                    width={600}
-                    height={600}
+                  width={400}
+                  height={400}
                   />
                 </CarouselItem>
               ))}

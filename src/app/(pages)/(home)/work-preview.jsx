@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button"
 import { Dialog, DialogContent } from "@/components/ui/dialog"
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel"
 
-const galleryData = Array.from({ length: 64 }).map((_, index) => ({
+const galleryData = Array.from({ length: 35 }).map((_, index) => ({
     imageSrc: `/images/works/${index + 1}.webp`,
     imageAlt: `Work Image ${index + 1}`,
 }))
@@ -36,10 +36,13 @@ export default function WorkPreview() {
     const isAllVisible = visibleCount >= galleryData.length
 
     return (
-        <section id="works">
-            <div className="section-wrapper">
+        <section
+            className="relative p-4 bg-background"
+            id="works"
+        >
+            <div className="mx-auto container p-4 md:px-12 lg:px-16 bg-secondary rounded-2xl">
                 <FadeUp>
-                    <h2>
+                    <h2 className="mt-6 h2">
                         <SparkleText text="Works" /> I&apos;ve done
                     </h2>
                 </FadeUp>
@@ -79,9 +82,9 @@ export default function WorkPreview() {
 
             {/* Modal with Carousel */}
             <Dialog open={isOpen} onOpenChange={setIsOpen}>
-                <DialogContent className="max-w-sm max-h-[70dvh] bg-background overflow-hidden">
+                <DialogContent className="max-w-sm max-h-[70vh] w-auto aspect-square bg-background overflow-hidden">
                     <Carousel
-                        className="bg-secondary max-w-[20rem] aspect-square"
+                        className="bg-secondary grid grid-cols-1 rounded-md aspect-square border"
                         opts={{
                             align: "center",
                             loop: true,

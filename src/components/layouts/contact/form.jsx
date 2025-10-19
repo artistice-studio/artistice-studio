@@ -152,7 +152,7 @@ export default function FormBox() {
 
                 {/* Inquiry Form */}
                 {form.watch("isHiring") ? <div className="p-4 bg-section-secondary rounded">
-                    <div className="mb-base font-semibold text-lg">Inquiry Form</div>
+                    <div className="mb-4 font-semibold text-lg">Inquiry Form</div>
                     <div className="space-y-6">
 
                         {/* Social Presence */}

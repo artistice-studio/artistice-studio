@@ -1,5 +1,5 @@
 import Mission from "./mission";
-import Hero from "@/components/ui/Hero";
+import Hero from "@/components/other/hero";
 import SparkleText from "@/components/helper/SparkleText";
 import Contact from "@/components/layouts/contact/contact";
 import TechStack from "./tech-stack";

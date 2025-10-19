@@ -59,9 +59,9 @@ export const siteMd = {
         creator: "@artistice_studio",
     },
     icons: {
-        icon: "/favicon.ico",
-        shortcut: "/favicon-16x16.png",
-        apple: "/apple-touch-icon.png",
+        icon: "/logo/favicon.ico",
+        shortcut: "/logo/favicon-16x16.png",
+        apple: "/logo/apple-touch-icon.png",
     },
 }
 
