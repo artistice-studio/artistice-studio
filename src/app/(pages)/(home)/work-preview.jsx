@@ -1,22 +1,24 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useMemo } from "react"
 import Image from "next/image"
 import SparkleText from "@/components/helper/SparkleText"
 import FadeUp from "@/components/animaitons/FadeUp"
 import { Button } from "@/components/ui/button"
 import { Dialog, DialogContent } from "@/components/ui/dialog"
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel"
-
-const galleryData = Array.from({ length: 35 }).map((_, index) => ({
-    imageSrc: `/images/works/${index + 1}.webp`,
-    imageAlt: `Work Image ${index + 1}`,
-}))
+import { gallery } from "@/lib/datas/index" // <-- your new structure
 
 export default function WorkPreview() {
+    const [activeCategory, setActiveCategory] = useState(gallery[0].slug)
     const [visibleCount, setVisibleCount] = useState(8)
     const [isOpen, setIsOpen] = useState(false)
     const [selectedIndex, setSelectedIndex] = useState(0)
+
+    // Get the selected category's images
+    const selectedImages = useMemo(() => {
+        return gallery.find((cat) => cat.slug === activeCategory)?.images || []
+    }, [activeCategory])
 
     const handleImageClick = (index) => {
         setSelectedIndex(index)
@@ -24,22 +26,23 @@ export default function WorkPreview() {
     }
 
     const handleLoadMore = () => {
-        setVisibleCount((prev) =>
-            Math.min(prev + 8, galleryData.length)
-        )
+        setVisibleCount((prev) => Math.min(prev + 8, selectedImages.length))
     }
 
     const handleViewLess = () => {
         setVisibleCount(8)
     }
 
-    const isAllVisible = visibleCount >= galleryData.length
+    const isAllVisible = visibleCount >= selectedImages.length
+
+    // Reset visibleCount when switching category
+    const handleCategoryChange = (slug) => {
+        setActiveCategory(slug)
+        setVisibleCount(8)
+    }
 
     return (
-        <section
-            className="relative p-4 bg-background"
-            id="works"
-        >
+        <section className="relative p-4 bg-background" id="works">
             <div className="mx-auto container p-4 md:px-12 lg:px-16 bg-secondary rounded-2xl">
                 <FadeUp>
                     <h2 className="mt-6 h2">
@@ -47,26 +50,35 @@ export default function WorkPreview() {
                     </h2>
                 </FadeUp>
 
-                {/* Gallery Grid */}
-                <div className="mt-12 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-                    {galleryData.slice(0, visibleCount).map((item, index) => (
-                        <div
-                            key={item.imageAlt + index}
-                            className="cursor-pointer"
-                            onClick={() => handleImageClick(index)}
+                {/* ---------------- Category Filter Buttons ---------------- */}
+                <div className="mt-6 flex flex-wrap gap-3 justify-center">
+                    {gallery.map((cat) => (
+                        <Button
+                            key={cat.slug}
+                            variant={activeCategory === cat.slug ? "default" : "outline"}
+                            onClick={() => handleCategoryChange(cat.slug)}
                         >
+                            {cat.label}
+                        </Button>
+                    ))}
+                </div>
+
+                {/* ---------------- Gallery Grid ---------------- */}
+                <div className="mt-12 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                    {selectedImages.slice(0, visibleCount).map((src, index) => (
+                        <div key={src + index} className="cursor-pointer" onClick={() => handleImageClick(index)}>
                             <Image
                                 className="w-full aspect-square object-cover select-none rounded-md"
-                                src={item.imageSrc}
+                                src={src}
                                 width={400}
                                 height={400}
-                                alt={item.imageAlt}
+                                alt={`Work Image ${index + 1}`}
                             />
                         </div>
                     ))}
                 </div>
 
-                {/* Load More / View Less Button */}
+                {/* ---------------- Load More / View Less ---------------- */}
                 <div className="mt-8 flex justify-center">
                     {!isAllVisible ? (
                         <Button variant="outline" onClick={handleLoadMore}>
@@ -80,7 +92,7 @@ export default function WorkPreview() {
                 </div>
             </div>
 
-            {/* Modal with Carousel */}
+            {/* ---------------- Modal Carousel ---------------- */}
             <Dialog open={isOpen} onOpenChange={setIsOpen}>
                 <DialogContent className="max-w-sm max-h-[70vh] w-auto aspect-square bg-background overflow-hidden">
                     <Carousel
@@ -92,18 +104,19 @@ export default function WorkPreview() {
                         }}
                     >
                         <CarouselContent>
-                            {galleryData.map((item, index) => (
+                            {selectedImages.map((src, index) => (
                                 <CarouselItem key={index} className="w-full flex justify-center">
                                     <Image
                                         className="aspect-square object-contain rounded-md select-none pointer-events-none"
-                                        src={item.imageSrc}
-                                        alt={item.imageAlt}
+                                        src={src}
                                         width={800}
                                         height={800}
+                                        alt={`Work Image ${index + 1}`}
                                     />
                                 </CarouselItem>
                             ))}
                         </CarouselContent>
+
                         <CarouselPrevious className="-left-4 cursor-pointer" />
                         <CarouselNext className="-right-4 cursor-pointer" />
                     </Carousel>

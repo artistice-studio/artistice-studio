@@ -148,6 +148,8 @@ export const benefits = [
     "Video Editing",
     "Post Uploading",
 ]
+
+// Pricing
 export const pricing = [
     {
         price: "8k",
@@ -209,5 +211,92 @@ export const faqs = [
         id: "faq5",
         question: "How can I view samples of your previous work?",
         answer: "You can view samples of our previous work in our service section on the website. It showcases a range of our projects in photoshoots, graphic design, and video editing, demonstrating our expertise and quality."
+    },
+]
+
+// GALLERY
+
+export const gallery = [
+    {
+        slug: "cloth-brand",
+        label: "Cloth Brand",
+        images: [
+            "/images/works/36.webp",
+            "/images/works/37.webp",
+            "/images/works/38.webp",
+            "/images/works/39.webp",
+            "/images/works/40.webp",
+            "/images/works/41.webp",
+            "/images/works/42.webp",
+            "/images/works/43.webp",
+            "/images/works/44.webp",
+            "/images/works/45.webp",
+            "/images/works/46.webp",
+            "/images/works/47.webp",
+            "/images/works/48.webp",
+            "/images/works/49.webp",
+            "/images/works/50.webp",
+            "/images/works/51.webp",
+            "/images/works/52.webp",
+            "/images/works/53.webp",
+            "/images/works/54.webp",
+            "/images/works/55.webp",
+            "/images/works/56.webp",
+            "/images/works/57.webp",
+            "/images/works/58.webp",
+            "/images/works/59.webp",
+            "/images/works/60.webp",
+            "/images/works/61.webp",
+            "/images/works/62.webp",
+            "/images/works/63.webp",
+            "/images/works/64.webp",
+        ]
+    },
+    {
+        slug: "bakery",
+        label: "Bakery",
+        images: [
+            "/images/works/1.webp",
+            "/images/works/2.webp",
+            "/images/works/3.webp",
+            "/images/works/4.webp",
+            "/images/works/5.webp",
+            "/images/works/6.webp",
+            "/images/works/7.webp",
+            "/images/works/8.webp",
+            "/images/works/9.webp",
+        ]
+    },
+    {
+        slug: "college",
+        label: "College",
+        images: [
+            "/images/works/10.webp",
+            "/images/works/11.webp",
+            "/images/works/13.webp",
+            "/images/works/14.webp",
+            "/images/works/15.webp",
+            "/images/works/17.webp",
+            "/images/works/18.webp",
+            "/images/works/19.webp",
+            "/images/works/24.webp",
+            "/images/works/25.webp",
+            "/images/works/28.webp",
+        ]
+    },
+    {
+        slug: "poster",
+        label: "Poster",
+        images: [
+            "/images/works/20.webp",
+            "/images/works/21.webp",
+            "/images/works/22.webp",
+            "/images/works/23.webp",
+            "/images/works/29.webp",
+            "/images/works/30.webp",
+            "/images/works/33.webp",
+            "/images/works/34.webp",
+            "/images/works/35.webp",
+        ]
     },
 ]
