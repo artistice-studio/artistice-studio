@@ -299,4 +299,17 @@ export const gallery = [
             "/images/works/35.webp",
         ]
     },
+    {
+        slug: "christmas",
+        label: "Christmas",
+        images: [
+            "/images/works/65.webp",
+            "/images/works/66.webp",
+            "/images/works/67.webp",
+            "/images/works/68.webp",
+            "/images/works/69.webp",
+            "/images/works/70.webp",
+            "/images/works/71.webp",
+        ]
+    },
 ]
