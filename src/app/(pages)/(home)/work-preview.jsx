@@ -6,8 +6,8 @@ import SparkleText from "@/components/helper/SparkleText"
 import FadeUp from "@/components/animaitons/FadeUp"
 import { Button } from "@/components/ui/button"
 import { Dialog, DialogContent } from "@/components/ui/dialog"
+import { gallery } from "@/lib/datas/index"
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel"
-import { gallery } from "@/lib/datas/index" // <-- your new structure
 
 export default function WorkPreview() {
     const [activeCategory, setActiveCategory] = useState(gallery[0].slug)

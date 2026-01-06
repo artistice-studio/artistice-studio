@@ -312,4 +312,22 @@ export const gallery = [
             "/images/works/71.webp",
         ]
     },
+    {
+        slug: "new-year",
+        label: "New Year",
+        images: [
+            "/images/works/72.webp",
+            "/images/works/73.webp",
+        ]
+    },
+    {
+        slug: "10-12-fail",
+        label: "10th  12th Fail",
+        images: [
+            "/images/works/74.webp",
+            "/images/works/75.webp",
+            "/images/works/76.webp",
+            "/images/works/77.webp",
+        ]
+    },
 ]
