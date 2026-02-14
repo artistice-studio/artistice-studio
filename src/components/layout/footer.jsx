@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { FacebookIcon, InstagramIcon, LinkedinIcon, TwitterIcon, YoutubeIcon } from "lucide-react";
+import { FacebookIcon, InstagramIcon, LayoutDashboard, LinkedinIcon, TwitterIcon, YoutubeIcon } from "lucide-react";
 import Logo from "../other/logo";
 
 const linkList = [
@@ -13,6 +13,7 @@ const socialLinks = [
   // { icon: TwitterIcon, label: "Twitter", href: "#" },
   // { icon: FacebookIcon, label: "Facebook", href: "#" },
   { icon: InstagramIcon, label: "Instagram", href: "https://www.instagram.com/sanjeet_kumar_patro/" },
+  { icon: LayoutDashboard, label: "Printerest",  href: "https://pin.it/KzNtwutfH" },
   // { icon: LinkedinIcon, label: "LinkedIn", href: "#" },
   // { icon: YoutubeIcon, label: "YouTube", href: "#" },
 ];
