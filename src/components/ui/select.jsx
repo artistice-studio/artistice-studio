@@ -50,7 +50,11 @@ function SelectTrigger({
 function SelectContent({
   className,
   children,
+<<<<<<< HEAD
   position = "item-aligned",
+=======
+  position = "popper",
+>>>>>>> aca94037c54df7147555afb4a24b4547ab0d8b4d
   align = "center",
   ...props
 }) {
@@ -104,9 +108,13 @@ function SelectItem({
         className
       )}
       {...props}>
+<<<<<<< HEAD
       <span
         data-slot="select-item-indicator"
         className="absolute right-2 flex size-3.5 items-center justify-center">
+=======
+      <span className="absolute right-2 flex size-3.5 items-center justify-center">
+>>>>>>> aca94037c54df7147555afb4a24b4547ab0d8b4d
         <SelectPrimitive.ItemIndicator>
           <CheckIcon className="size-4" />
         </SelectPrimitive.ItemIndicator>

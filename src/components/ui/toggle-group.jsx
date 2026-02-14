@@ -8,14 +8,20 @@ import { toggleVariants } from "@/components/ui/toggle"
 const ToggleGroupContext = React.createContext({
   size: "default",
   variant: "default",
+<<<<<<< HEAD
   spacing: 0,
+=======
+>>>>>>> aca94037c54df7147555afb4a24b4547ab0d8b4d
 })
 
 function ToggleGroup({
   className,
   variant,
   size,
+<<<<<<< HEAD
   spacing = 0,
+=======
+>>>>>>> aca94037c54df7147555afb4a24b4547ab0d8b4d
   children,
   ...props
 }) {
@@ -24,6 +30,7 @@ function ToggleGroup({
       data-slot="toggle-group"
       data-variant={variant}
       data-size={size}
+<<<<<<< HEAD
       data-spacing={spacing}
       style={{
         "--gap": spacing
@@ -34,6 +41,14 @@ function ToggleGroup({
       )}
       {...props}>
       <ToggleGroupContext.Provider value={{ variant, size, spacing }}>
+=======
+      className={cn(
+        "group/toggle-group flex w-fit items-center rounded-md data-[variant=outline]:shadow-xs",
+        className
+      )}
+      {...props}>
+      <ToggleGroupContext.Provider value={{ variant, size }}>
+>>>>>>> aca94037c54df7147555afb4a24b4547ab0d8b4d
         {children}
       </ToggleGroupContext.Provider>
     </ToggleGroupPrimitive.Root>
@@ -54,11 +69,18 @@ function ToggleGroupItem({
       data-slot="toggle-group-item"
       data-variant={context.variant || variant}
       data-size={context.size || size}
+<<<<<<< HEAD
       data-spacing={context.spacing}
       className={cn(toggleVariants({
         variant: context.variant || variant,
         size: context.size || size,
       }), "w-auto min-w-0 shrink-0 px-3 focus:z-10 focus-visible:z-10", "data-[spacing=0]:rounded-none data-[spacing=0]:shadow-none data-[spacing=0]:first:rounded-l-md data-[spacing=0]:last:rounded-r-md data-[spacing=0]:data-[variant=outline]:border-l-0 data-[spacing=0]:data-[variant=outline]:first:border-l", className)}
+=======
+      className={cn(toggleVariants({
+        variant: context.variant || variant,
+        size: context.size || size,
+      }), "min-w-0 flex-1 shrink-0 rounded-none shadow-none first:rounded-l-md last:rounded-r-md focus:z-10 focus-visible:z-10 data-[variant=outline]:border-l-0 data-[variant=outline]:first:border-l", className)}
+>>>>>>> aca94037c54df7147555afb4a24b4547ab0d8b4d
       {...props}>
       {children}
     </ToggleGroupPrimitive.Item>
