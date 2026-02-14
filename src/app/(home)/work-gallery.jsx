@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button"
 import { Dialog, DialogContent } from "@/components/ui/dialog"
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel"
 import { gallery } from "@/cms/gallery"
+import TextAnimation from "@/components/animations/text-animation"
 
 export default function WorkGallery() {
     const [activeCategory, setActiveCategory] = useState(gallery[0].slug)
@@ -43,13 +44,15 @@ export default function WorkGallery() {
         <section
             className="relative bg-background"
             aria-labelledby="works-section"
-            id="works"
+            id="my-work"
             role="region"
         >
             <div className="mx-auto container px-6 py-12 md:p-16 lg:py-20">
                 <header className="mx-auto max-w-2xl text-center flex flex-col items-center justify-center">
                     <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-balance">
-                        A Showcase of of my Creativity and Expertise
+                        <TextAnimation animation="blurInUp">
+                            A Showcase of of my Creativity and Expertise
+                        </TextAnimation>
                     </h2>
                 </header>
 

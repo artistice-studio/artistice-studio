@@ -80,7 +80,7 @@ export default function Footer() {
         </div>
 
         {/* Footer bottom bar */}
-        <div className="border-t mt-8 pt-8 md:mt-12 md:pt-12 flex gap-4 flex-col md:flex-row-reverse md:justify-center md:items-center text-sm">
+        <div className="border-t mt-8 pt-8 md:mt-12 md:pt-12 flex gap-4 flex-col md:flex-row-reverse md:justify-between md:items-center text-sm">
           {/* <nav aria-label="Legal links">
             <ul className="flex flex-col md:flex-row md:items-center gap-4">
               <li>
@@ -115,6 +115,17 @@ export default function Footer() {
           <p>
             © {new Date().getFullYear()} Artistice Studio. All rights reserved.
           </p>
+          <div className="">
+            Developed by{" "}
+            <Link
+              href="https://mallickwebstudio.com/"
+              className="underline underline-offset-2 hover:underline-offset-4"
+              aria-label="Sanjeet Kumar Patro LinkedIn Profile"
+            >
+              @mallickwebstudio
+            </Link>{" "}
+             with <span className="text-red-500">❤</span>  
+          </div>
         </div>
       </div>
     </footer>

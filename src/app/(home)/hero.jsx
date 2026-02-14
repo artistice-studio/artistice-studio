@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import TextAnimation from "@/components/animations/text-animation";
+import Link from "next/link";
 
 export default function Hero() {
   return (
@@ -42,22 +43,22 @@ export default function Hero() {
               </li>
               <li className="p-1 px-2 md:p-2 w-fit bg-white text-black text-sm md:text-base font-semibold -skew-x-12">
                 <TextAnimation animation="slideRight" delay={0.7} by="character">
-                Photoshoots
+                  Photoshoots
                 </TextAnimation>
               </li>
               <li className="p-1 px-2 md:p-2 w-fit bg-white text-black text-sm md:text-base font-semibold -skew-x-12">
                 <TextAnimation animation="slideRight" delay={0.9} by="character">
-                Brand designing
+                  Brand designing
                 </TextAnimation>
               </li>
               <li className="p-1 px-2 md:p-2 w-fit bg-white text-black text-sm md:text-base font-semibold -skew-x-12">
                 <TextAnimation animation="slideRight" delay={1.1} by="character">
-                Video editing
+                  Video editing
                 </TextAnimation>
               </li>
               <li className="p-1 px-2 md:p-2 w-fit bg-white text-black text-sm md:text-base font-semibold -skew-x-12">
                 <TextAnimation animation="slideRight" delay={1.3} by="character">
-                Social media management
+                  Social media management
                 </TextAnimation>
               </li>
             </ul>
@@ -67,16 +68,22 @@ export default function Hero() {
                 variant="default"
                 size="lg"
                 aria-label="Get started with the service"
+                asChild
               >
-                Book a Free Consultation
+                <Link href="/#contact">
+                  Contact for Free Consultation
+                </Link>
               </Button>
               <Button
                 className="cursor-pointer"
                 variant="outline"
                 size="lg"
                 aria-label="Learn more about the offering"
+                asChild
               >
-                View Portfolio
+                <Link href="/#my-work">
+                  View Portfolio
+                </Link>
               </Button>
             </div>
           </div>
