@@ -34,11 +34,7 @@ function FieldLegend({
       data-variant={variant}
       className={cn(
         "mb-3 font-medium",
-<<<<<<< HEAD
         "data-[variant=legend]:text-base",
-=======
-        "data-[variant=legend]:text-4",
->>>>>>> aca94037c54df7147555afb4a24b4547ab0d8b4d
         "data-[variant=label]:text-sm",
         className
       )}
@@ -195,7 +191,6 @@ function FieldError({
       return children
     }
 
-<<<<<<< HEAD
     if (!errors?.length) {
       return null
     }
@@ -206,23 +201,11 @@ function FieldError({
 
     if (uniqueErrors?.length == 1) {
       return uniqueErrors[0]?.message
-=======
-    if (!errors) {
-      return null
-    }
-
-    if (errors?.length === 1 && errors[0]?.message) {
-      return errors[0].message
->>>>>>> aca94037c54df7147555afb4a24b4547ab0d8b4d
     }
 
     return (
       <ul className="ml-4 flex list-disc flex-col gap-1">
-<<<<<<< HEAD
         {uniqueErrors.map((error, index) =>
-=======
-        {errors.map((error, index) =>
->>>>>>> aca94037c54df7147555afb4a24b4547ab0d8b4d
           error?.message && <li key={index}>{error.message}</li>)}
       </ul>
     );

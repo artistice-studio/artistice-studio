@@ -7,26 +7,26 @@ export default function sitemap() {
         {
             url: baseUrl,
         },
-        {
-            url: `${baseUrl}/about`,
-        },
-        {
-            url: `${baseUrl}/contact`,
-        },
-        {
-            url: `${baseUrl}/services`,
-        },
-        {
-            url: `${baseUrl}/privacy-policy`,
-        },
-        {
-            url: `${baseUrl}/services/photo-shoot`,
-        },
-        {
-            url: `${baseUrl}/services/video-editing`,
-        },
-        {
-            url: `${baseUrl}/services/graphic-design`,
-        },
+        // {
+        //     url: `${baseUrl}/about`,
+        // },
+        // {
+        //     url: `${baseUrl}/contact`,
+        // },
+        // {
+        //     url: `${baseUrl}/services`,
+        // },
+        // {
+        //     url: `${baseUrl}/privacy-policy`,
+        // },
+        // {
+        //     url: `${baseUrl}/services/photo-shoot`,
+        // },
+        // {
+        //     url: `${baseUrl}/services/video-editing`,
+        // },
+        // {
+        //     url: `${baseUrl}/services/graphic-design`,
+        // },
     ]
 }

@@ -1,29 +1,33 @@
-import { Archivo } from 'next/font/google'
-import Footer from '@/components/layouts/footer/footer';
-import Providers from '@/components/providers/providers';
-import './globals.css'
-import './helper.css'
-import { siteMd } from '@/lib/datas/metaDatas';
-import Navbar from '@/components/layouts/navbar/navbar';
+import { Geist, Geist_Mono, Lexend } from "next/font/google";
+import "./globals.css";
+import { ThemeProvider as NextThemesProvider } from "next-themes"
+import Navbar from "@/components/layout/navbar";
+import Footer from "@/components/layout/footer";
+import { siteMd } from "@/lib/datas/metaDatas";
 
-const archivo = Archivo({ subsets: ['latin'], });
+const lexend = Lexend({
+  variable: "--font-lexend",
+});
 
 export const metadata = siteMd;
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={archivo.className} suppressHydrationWarning="true" suppressContentEditableWarning="true">
-        <Providers>
-          <div className="min-h-screen flex flex-col">
-            <Navbar />
-            <div className="flex-1">
-              {children}
-            </div>
-            <Footer />
-          </div>
-        </Providers>
+    <html lang="en" suppressHydrationWarning>
+      <body
+        className={`${lexend.variable} ${lexend.variable} antialiased`}
+      >
+        <NextThemesProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <Navbar />
+          {children}
+          <Footer />
+        </NextThemesProvider>
       </body>
-    </html >
-  )
+    </html>
+  );
 }
